@@ -1,37 +1,15 @@
-// Code your solutions in this file
-for (let age = 30; age < 40; age++){
-   console.log(`I'm ${age} years old. Happy birthday to me!`);
-}
-
-const gifts = ["teddy bear", "drone", "doll"];
-
-function wrapGifts(gifts) {
-  for (let i = 0; i < gifts.length; i++) {
-    console.log(`Wrapped ${gifts[i]} and added a bow!`);
+function writeCards( namesArray, event ) {
+  let thankYouCards = []
+  for ( let i = 0; i < namesArray.length; i++ ) {
+    thankYouCards.push( `Thank you, ${namesArray[i]}, for the wonderful ${event} gift!` )
   }
-
-  return gifts;
+  return thankYouCards
 }
 
-wrapGifts(gifts);
-
-const cards = ["Guadalupe", "Ollie", "Aki"];
-
-function writeCards(cards){
-    for (let i = 0; i < cards.length; i++) {
-       console.log(`Thankyou, ${cards[i]}, for the wonderful surprise gift!`);
-    }
-    return([...cards, "surprise"]);
+function countDown( startingNumber ) {
+  while ( startingNumber > 0 ) {
+    console.log( startingNumber );
+    startingNumber -= 1;
+  }
+  console.log( startingNumber );
 }
-writeCards([...cards, "surprise"]);
-
-
-
-function countDown(){
-    let countDown = 10;
-    while (countDown > -1) {
-        console.log(countDown--);
-    }
-    return countDown;
-}
-countDown(10);
